@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import HomePageCard from "@/components/HomepageCard";
 import app from "@/firebase";
 
-export const getdata = async (cate: string) => {
+const getdata = async (cate: string) => {
     app()
     const db = getFirestore()
     let q = query(collection(db, 'posts'), where('category', "==", cate))
