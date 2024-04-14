@@ -29,7 +29,7 @@ const MoreLikeThisCard = ({ e }) => {
                 height={200}
             />
             <div className="my-3">
-                <span className=" cursor-pointer border-b-2 border-[transparent] w[fit] hover:border-b-2 hover:border-[#000] " >{e.title}</span>
+                <span onClick={navigate} className=" cursor-pointer border-b-2 border-[transparent] w[fit] hover:border-b-2 hover:border-[#000] " >{e.title}</span>
             </div>
 
         </div>

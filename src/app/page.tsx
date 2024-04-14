@@ -7,7 +7,7 @@ import CategoryListing from "@/components/categoryLisitng";
 import RightSection from "@/components/RightSection";
 
 
-export const getData = async () => {
+const getData = async () => {
   app()
   const db = getFirestore()
   const querySnapshot = await getDocs(collection(db, "posts"));
