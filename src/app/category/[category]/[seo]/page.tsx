@@ -5,7 +5,7 @@ import { getFirestore, collection, getDocs, query, where } from "firebase/firest
 import app from "@/firebase";
 import RightSection from "@/components/RightSection";
 
-export const getdata = async (seo: string) => {
+const getdata = async (seo: string) => {
 
     app()
     const db = getFirestore();

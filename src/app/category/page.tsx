@@ -7,7 +7,7 @@ import { collection, getDocs, getFirestore, orderBy, query } from "firebase/fire
 import app from "@/firebase";
 import Allcategories from "@/components/allcategories";
 
-export const getCate = async () => {
+const getCate = async () => {
     app()
     const db = getFirestore()
     let categoriesQuery = query(collection(db, "categories"), orderBy('name'))
