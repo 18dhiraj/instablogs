@@ -24,7 +24,7 @@ export const getdata = async (seo: string) => {
     return { posts: _posts, more: _more }
 }
 
-export default async function (props: any) {
+const Details = async (props: any) => {
 
     const { params } = props
     let detailss = await getdata(params.seo)
@@ -68,3 +68,5 @@ export default async function (props: any) {
         </div>
     )
 }
+
+export default Details
