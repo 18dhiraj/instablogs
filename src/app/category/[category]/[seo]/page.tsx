@@ -32,9 +32,9 @@ const Details = async (props: any) => {
     let moreLike = detailss.more;
 
     return (
-        <div className="p-0 p-md-10 pt-1">
-            <div className="grid grid-cols-3 gap-[80px] mt-10">
-                <div className="col-span-2">
+        <div className="pr-2 pl-5 p-md-10 pt-1">
+            <div className="grid grid-cols-4 md:grid-cols-3 gap-[20px] md:gap-[80px] mt-10">
+                <div className=" col-span-3 md:col-span-2">
                     <h1 className="fs-[20px] text-2xl fw-bolder mb-10" >{details.title}</h1>
                     <div className=" max-h-[400px]" >
                         <Image

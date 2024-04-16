@@ -12,7 +12,7 @@ interface Person {
 }
 
 
-const MoreLikeThisCard = ({ e }) => {
+const MoreLikeThisCard = ({ e }: any) => {
 
     const router = useRouter();
 

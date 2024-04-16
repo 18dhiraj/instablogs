@@ -3,16 +3,9 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <footer>
+        <footer >
             <div className="bg-indigo-200  mt-10 p-2 p-md-10 p-lg-20 " >
-                {/* <div className="m-4" >
-                    <div className="text-xl" >categories</div>
-                    <div className="text-sm text-md-md" >Geographic</div>
-                    <div className="text-sm text-md-md" >Geographic</div>
-                    <div className="text-sm text-md-md" >Geographic</div>
-                    <div className="text-sm text-md-md" >Geographic</div>
-                </div> */}
-                <div className="flex w-fit m-auto my-10">
+                <div className="flex flex-col md:flex-row w-fit m-auto my-10">
                     <Link href={'/category'} className="mx-2 text-sm text-md-md mx-md-10">All categoryies</Link>
                     <Link href={'/category/technology'} className="mx-2 text-sm text-md-md mx-md-10">Techology</Link>
                     <Link href={'/category/travel'} className="mx-2 text-sm text-md-md mx-md-10">Travel</Link>

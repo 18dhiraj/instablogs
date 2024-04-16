@@ -17,13 +17,13 @@ const HomePageCard = (data: any) => {
     return (
         <div className={`mb-[10px] ${data.i == 0 ? "" : "border-t-2"} p-10 `}>
             <h1 className="fs-[20px] text-2xl fw-bolder mb-10 cursor-pointer" onClick={navigate} >{title}</h1>
-            <div className=" max-h-[400px] cursor-pointer" onClick={navigate} >
+            <div className="max-h-[400px] cursor-pointer" onClick={navigate} >
                 <Image
                     src={image}
                     alt={seo}
                     width={200}
                     height={200}
-                    className="object-contain w-full h-[400px]"
+                    className="object-contain w-full max-h-[400px]"
                 />
             </div>
             <div className="mt-5">

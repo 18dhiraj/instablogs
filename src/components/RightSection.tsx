@@ -33,11 +33,11 @@ const RightSection = async () => {
     let { category, latest } = await getData()
 
     return (
-        <div>
+        <div className="overflow-hidden">
             <div className="mb-5">
-                <div className="text-xl mb-5" >Featured</div>
+                <div className="text-xl mb-5 whitespace-break-spaces" >Featured</div>
 
-                <div className="grid grid-cols-2 gap-5" >
+                <div className="grid grid-cols-1 md:grid-cols-2  gap-5" >
                     {
                         latest.map((e: any, i: number) => (
                             <SideListPostItem e={e} i={i} />
@@ -47,8 +47,8 @@ const RightSection = async () => {
                 </div >
             </div >
             <div className="mb-5">
-                <div className="text-xl mb-5">Top Categories</div>
-                <div className="grid grid-cols-2 gap-5" >
+                <div className="text-xl mb-5 whitespace-break-spaces" >Top Categories</div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5" >
                     {
                         category.map((e: any, i: number) => (
                             <SideListCategoryItem e={e} i={i} />

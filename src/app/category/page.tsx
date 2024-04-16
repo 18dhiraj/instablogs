@@ -27,7 +27,7 @@ const Category = async () => {
     let lastAlphabet = ''
 
     return (
-        <div>
+        <div className="px-4">
             <div className="text-xl py-4">Categories</div>
             {/* <div className="grid gap-4 grid-cols-4" > */}
             <div className="" >

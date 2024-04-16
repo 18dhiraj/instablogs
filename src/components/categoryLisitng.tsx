@@ -12,7 +12,7 @@ const CategoryListing = (props: any) => {
         <div className="mb-5 relative flex justify-center items-center cursor-pointer" onClick={() => router.push(`/category/${e.seo}`)}>
             <Image
                 src={e.image}
-                className="object-cover max-h-[200px] h-[200px] w-[100%] "
+                className="object-cover max-h-[100px] h-[100px] md:max-h-[200px] md:h-[200px] w-[100%] "
                 alt={e.seo}
                 width={100}
                 height={100}

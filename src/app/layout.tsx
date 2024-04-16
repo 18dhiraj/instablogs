@@ -7,8 +7,8 @@ import Sidebar from "@/components/Sidebar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Social",
-  description: "Social app connect",
+  title: "InstaBlogs",
+  description: "Insta updates from around the world",
 };
 
 export default function RootLayout({

@@ -12,7 +12,7 @@ const SideListPostItem = (props) => {
             <Image
                 src={e.image}
                 alt="category"
-                className=" object-cover h-[150px] w-[100%] "
+                className=" object-cover h-[70px] md:h-[150px] w-[100%] "
                 width={100}
                 height={100}
             />
