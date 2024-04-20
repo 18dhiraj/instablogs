@@ -17,11 +17,13 @@ export default async function (repo: any) {
 
     let posts = await getdata(repo.params.category)
     return (
-        <div className="pt-10" >
-            {
-                posts.props.map((e: any, i: number) => <HomePageCard e={e} i={i} />)
-            }
+        <>
+            <div className="pt-10 grid grid-cols-1 lg:grid-cols-2 gap-[80px]" >
+                {
+                    posts.props.map((e: any, i: number) => <HomePageCard e={e} i={i} w={'80%'} />)
+                }
+            </div>
             <Footer />
-        </div>
+        </>
     );
 }

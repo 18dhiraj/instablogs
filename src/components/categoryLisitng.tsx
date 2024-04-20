@@ -12,12 +12,12 @@ const CategoryListing = (props: any) => {
         <div className="mb-5 relative flex justify-center items-center cursor-pointer" onClick={() => router.push(`/category/${e.seo}`)}>
             <Image
                 src={e.image}
-                className="object-cover max-h-[100px] h-[100px] md:max-h-[200px] md:h-[200px] w-[100%] "
+                className="object-cover max-h-[100px] h-[100px] md:max-h-[200px] md:h-[170px] w-[100%] rounded-lg hover:scale-105 ease duration-200 "
                 alt={e.seo}
-                width={100}
+                width={300}
                 height={100}
             />
-            <div className=' absolute bottom-[-10px] bg-[orange] px-2 text-[#fff]' >
+            <div className='text-[10px] md:text-[12px] absolute bottom-[-10px] bg-[orange] px-2 text-[#fff]' >
                 {e.name}
             </div>
         </div>

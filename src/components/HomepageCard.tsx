@@ -15,19 +15,19 @@ const HomePageCard = (data: any) => {
     }
 
     return (
-        <div className={`mb-[10px] ${data.i == 0 ? "" : "border-t-2"} p-10 `}>
-            <h1 className="fs-[20px] text-2xl fw-bolder mb-10 cursor-pointer" onClick={navigate} >{title}</h1>
+        <div className={`py-5 `}>
+            <h1 className="fs-[20px] text-lg md:text-2xl fw-bolder mb-5 cursor-pointer" onClick={navigate} >{title}</h1>
             <div className="max-h-[400px] cursor-pointer" onClick={navigate} >
                 <Image
                     src={image}
                     alt={seo}
-                    width={200}
-                    height={200}
-                    className="object-contain w-full max-h-[400px]"
+                    width={700}
+                    height={400}
+                    className="object-cover w-full max-h-[350px] h-[200px] md:h-[350px] rounded-lg"
                 />
             </div>
             <div className="mt-5">
-                <p>{summary}</p>
+                <p className="text-sm md:text-lg">{summary}</p>
             </div>
         </div>
     )

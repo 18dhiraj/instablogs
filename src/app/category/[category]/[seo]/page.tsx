@@ -32,15 +32,15 @@ const Details = async (props: any) => {
     let moreLike = detailss.more;
 
     return (
-        <div className="pr-2 pl-5 p-md-10 pt-1">
-            <div className="grid grid-cols-4 md:grid-cols-3 gap-[20px] md:gap-[80px] mt-10">
-                <div className=" col-span-3 md:col-span-2">
+        <div className="px-4 p-md-10 pt-1">
+            <div className="grid grid-cols-6 md:grid-cols-3 gap-[10px] md:gap-[40px] mt-10">
+                <div className=" col-span-4 md:col-span-2">
                     <h1 className="fs-[20px] text-2xl fw-bolder mb-10" >{details.title}</h1>
                     <div className=" max-h-[400px]" >
                         <Image
                             src={details.image}
                             alt="taj mahal"
-                            className="object-cover w-full h-[400px]"
+                            className="object-cover h-[400px] rounded-lg"
                             width={700}
                             height={400}
                         />
@@ -52,7 +52,7 @@ const Details = async (props: any) => {
                         {details?.description}
                     </div>
                 </div>
-                <div className="col-span-1" >
+                <div className="col-span-2 md:col-span-1" >
                     <RightSection />
                 </div>
             </div>

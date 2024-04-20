@@ -26,13 +26,58 @@ const Category = async () => {
 
     let lastAlphabet = ''
 
+    let formatedCate: any = []
+
+    cate.map((e: any) => {
+        let firstWord: string = e.name.charAt(0)
+        if (lastAlphabet == '') {
+            formatedCate.push({ [firstWord]: [e] })
+            lastAlphabet = firstWord
+        } else if (lastAlphabet == firstWord) {
+            formatedCate.map((e1) => {
+                Object.entries(e1).map(([k, v]) => {
+                    if (k == firstWord) {
+                        v.push(e)
+                    }
+                })
+            })
+        } else {
+            formatedCate.push({ [firstWord]: [e] })
+            lastAlphabet = firstWord
+        }
+    })
+
+
     return (
         <div className="px-4">
             <div className="text-xl py-4">Categories</div>
             {/* <div className="grid gap-4 grid-cols-4" > */}
             <div className="" >
                 {
-                    cate.map((e, i) => {
+                    formatedCate.map((e, i) => {
+                        return (
+                            <>
+                                <div>
+                                    {
+                                        Object.entries(e).map(([e1, v1], i1) => {
+                                            return (
+                                                <>
+                                                    <div className="my-5 text-xl text-blue underline">{e1}</div>
+                                                    <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 " >
+                                                        {
+                                                            v1.map((val, ival) => {
+                                                                return <Allcategories e={val} i={ival} />
+                                                            })
+                                                        }
+                                                    </div>
+                                                </>
+                                            )
+
+                                        })
+                                    }
+                                </div>
+                            </>
+                        )
 
                         let firstWord = e.name.charAt(0)
                         if (lastAlphabet == "") {

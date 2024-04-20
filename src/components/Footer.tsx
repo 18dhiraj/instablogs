@@ -11,10 +11,10 @@ const Footer = () => {
                     <Link href={'/category/travel'} className="mx-2 text-sm text-md-md mx-md-10">Travel</Link>
                     <Link href={'/category/food'} className="mx-2 text-sm text-md-md mx-md-10">Food</Link>
                     <Link href={'/category/health'} className="mx-2 text-sm text-md-md mx-md-10">Health</Link>
-                    <Link href={'/category/personal-development'} className="mx-2 text-sm text-md-md mx-md-10">Personal Development</Link>
+                    <Link href={'/category/personal-improvement'} className="mx-2 text-sm text-md-md mx-md-10">Personal Improvement</Link>
                 </div>
                 <div className="w-full border my-10 " ></div>
-                <div className="m-4">© 2021 Company, Inc</div>
+                <div className="m-4 text-[12px]">© 2021 Company, Inc</div>
             </div>
 
         </footer>

@@ -12,7 +12,7 @@ const getData = async () => {
   const db = getFirestore()
   const querySnapshot = await getDocs(collection(db, "posts"));
 
-  const categoriesQuery = query(collection(db, 'categories'), limit(4))
+  const categoriesQuery = query(collection(db, 'categories'), limit(3))
   const categoriesSnapshot = await getDocs(categoriesQuery);
   let _posts: any = []
   let _category: any = []
@@ -32,7 +32,7 @@ export default async () => {
 
   return (
     <div className="pt-10 px-4" >
-      <div className="grid grid-cols-3 gap-[20px] md:gap-[80px]">
+      <div className="grid grid-cols-3 gap-[10px] md:gap-[20px]">
         <div className="col-span-2">
           <div className="grid gap-4 grid-cols-2 md:grid-cols-3 mb-4" >
             {cate.map((e: any, i: number) => <CategoryListing e={e} i={i} />)}
