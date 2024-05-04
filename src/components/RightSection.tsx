@@ -34,7 +34,7 @@ const RightSection = async () => {
     return (
         <div className="overflow-hidden bg-[#fae8cf] p-1 md:p-4 rounded-lg">
             <div className="mb-5">
-                <div className=" text-sm md:text-xl mb-2 p-1 md:p-0 whitespace-break-spaces" >Featured</div>
+                <div className=" text-sm md:text-xl mb-2 p-1 md:p-0 whitespace-break-spaces" >Popular</div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2" >
                     {

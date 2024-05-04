@@ -33,7 +33,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning={true}>
       <body className={inter.className}>
         <Header />
-        <div className=" m-[20px] mt-[70px] max-w-screen-xl mx-auto ">
+        <div className=" mt-[70px] max-w-screen-xl mx-auto ">
           {children}
         </div>
       </body>

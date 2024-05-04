@@ -45,11 +45,10 @@ const Details = async (props: any) => {
                             height={400}
                         />
                     </div>
-                    <div className="my-4">
+                    <div className="my-4 text-lg " style={{borderBottom:'1px solid lightgray'}} >
                         {details.summary}
                     </div>
-                    <div>
-                        {details?.description}
+                    <div dangerouslySetInnerHTML={{ __html: details?.description }}>
                     </div>
                 </div>
                 <div className="col-span-2 md:col-span-1" >

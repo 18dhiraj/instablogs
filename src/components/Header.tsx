@@ -1,12 +1,13 @@
 'use client'
 import React, { useState } from "react";
-import { useRouter, useParams } from "next/navigation";
+import { useRouter, useParams, usePathname } from "next/navigation";
 import Link from "next/link";
 import SearchComponent from "./SearchComponent";
 const Header = () => {
 
     const router = useRouter()
     const params = useParams()
+    const pathName = usePathname();
     const [showNavigation, setShowNavigation] = useState(false)
     const [showSearch, setShowSearch] = useState(false)
     const onSearchClick = () => {
@@ -20,17 +21,18 @@ const Header = () => {
         setShowSearch(!showSearch)
     }
 
-    console.log(params)
+    // console.log(params)
+    // console.log(pathName)
 
     return (
         <header className={`min-h-[70px] border flex justify-between items-center ${showSearch ? "" : 'fixed'} w-full bg-white top-0 z-10`}>
             <div onClick={() => router.push('/')} className="ml-[3rem] text-[orange] font-bold cursor-pointer" >INSTABLOGS</div>
             <div className="hidden md:flex justify-end flex-1">
-                <Link className={`mx-4 border-[transparent] border-b-2 hover:border-b-2 hover:border-black `} href={'/'}>Home</Link>
-                <Link className={`mx-4 border-[transparent] border-b-2 hover:border-b-2 hover:border-black ${params?.category == 'travel' ? "border-black border-b-2" : ""} `} href={'/category/travel'}>Travel</Link>
-                <Link className={`mx-4 border-[transparent] border-b-2 hover:border-b-2 hover:border-black ${params?.category == 'technology' ? "border-black border-b-2" : ""} `} href={'/category/technology'}>Technology</Link>
-                <Link className={`mx-4 border-[transparent] border-b-2 hover:border-b-2 hover:border-black ${params?.category == 'personal-improvement' ? "border-black border-b-2" : ""} `} href={'/category/personal-improvement'}>Personal Improvment</Link>
-                <Link className={`mx-4 border-[transparent] border-b-2 hover:border-b-2 hover:border-black`} href={'/category'}>All categories</Link>
+                <Link className={`mx-4 border-[transparent] border-b-2 hover:border-b-2 hover:border-[orange] ${pathName == '/' ? "border-[orange] text-[orange] border-b-2" : "text-[black]"} `} href={'/'}>Home</Link>
+                <Link className={`mx-4 border-[transparent] border-b-2 hover:border-b-2 hover:border-[orange] ${params?.category == 'travel' ? "border-[orange] text-[orange] border-b-2" : "text-[black]"} `} href={'/category/travel'}>Travel</Link>
+                <Link className={`mx-4 border-[transparent] border-b-2 hover:border-b-2 hover:border-[orange] ${params?.category == 'technology' ? "border-[orange] text-[orange] border-b-2" : "text-[black]"} `} href={'/category/technology'}>Technology</Link>
+                <Link className={`mx-4 border-[transparent] border-b-2 hover:border-b-2 hover:border-[orange] ${params?.category == 'personal-improvement' ? "border-[orange] text-[orange] border-b-2" : "text-[black]"} `} href={'/category/personal-improvement'}>Personal Improvment</Link>
+                <Link className={`mx-4 border-[transparent] border-b-2 hover:border-b-2 hover:border-[orange] ${pathName == '/category' ? "border-[orange] text-[orange] border-b-2" : "text-[black]"}`} href={'/category'}>All categories</Link>
             </div>
             <div onClick={() => setShowNavigation(!showNavigation)} className="md:hidden justify-start flex-1 pl-4" >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
