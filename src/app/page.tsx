@@ -49,3 +49,5 @@ export default async () => {
     </div>
   )
 }
+
+export const revalidate = 100;
