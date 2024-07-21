@@ -13,7 +13,7 @@ const SearchComponent = (props: any) => {
     const { setShowSearch } = props
     const router = useRouter()
 
-    const debounce = async (text: string ) => {
+    const debounce = async (text: string) => {
         setSearchText(text)
         app()
         const db = getFirestore()
@@ -38,7 +38,9 @@ const SearchComponent = (props: any) => {
             <div className="mt-3">
                 {searchResults.map((e: any) => {
                     return (
-                        <Link href={`/category/${e.category}/${e.seo}`} className="p-1 hover:bg-[#eee] rounded" onClick={() => onSearchItemSelect(e)} >{e.title}</Link>
+                        <div>
+                            <Link href={`/category/${e.category}/${e.seo}`} className="p-1 hover:bg-[#eee] rounded" onClick={() => onSearchItemSelect(e)} >{e.title}</Link>
+                        </div>
                     )
                 })}
             </div>
