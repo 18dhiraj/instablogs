@@ -14,7 +14,7 @@ const Footer = () => {
                     <Link href={'/category/personal-improvement'} className="mx-2 text-sm text-md-md mx-md-10">Personal Improvement</Link>
                 </div>
                 <div className="w-full border my-10 " ></div>
-                <div className="m-4 text-[12px]">© 2021 Company, Inc</div>
+                <div className="m-4 text-[12px]">© 2024 Company, Inc</div>
             </div>
 
         </footer>

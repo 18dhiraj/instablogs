@@ -20,11 +20,11 @@ const MoreLikeThisCard = ({ e }: any) => {
         router.push(`/category/${e.category}/${e.seo}`)
     }
     return (
-        <div onClick={navigate} className=" mr-10 min-w-[300px] w-[300px] min-w-md-[350px] w-md-[350px]  cursor-pointer   ">
+        <div onClick={navigate} className="mr-5 md:mr-8 min-w-[250px] w-[250px] md:min-w-[350px] md:w-[350px] cursor-pointer">
             <Image
                 src={e.image}
                 alt="more like this"
-                className="w-[100%] h-[200px] object-cover rounded-lg"
+                className="w-[100%] h-[150px] md:h-[200px]  object-contain rounded-lg"
                 width={400}
                 height={200}
             />

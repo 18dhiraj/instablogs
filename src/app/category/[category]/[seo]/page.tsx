@@ -35,17 +35,17 @@ const Details = async (props: any) => {
         <div className="px-4 p-md-10 pt-1">
             <div className="grid grid-cols-6 md:grid-cols-3 gap-[10px] md:gap-[40px] mt-10">
                 <div className=" col-span-4 md:col-span-2">
-                    <h1 className="fs-[20px] text-2xl fw-bolder mb-10" >{details.title}</h1>
-                    <div className=" max-h-[400px]" >
+                    <h1 className="fs-[20px] text-2xl font-semibold mb-10" >{details.title}</h1>
+                    <div className="" >
                         <Image
                             src={details.image}
                             alt="taj mahal"
-                            className="object-cover h-[400px] rounded-lg"
+                            className="object-contain h-auto max-h-[400px] w-[320] rounded-lg"
                             width={700}
                             height={400}
                         />
                     </div>
-                    <div className="my-4 text-lg " style={{borderBottom:'1px solid lightgray'}} >
+                    <div className="my-4 text-md " >
                         {details.summary}
                     </div>
                     <div dangerouslySetInnerHTML={{ __html: details?.description }}>
@@ -56,7 +56,7 @@ const Details = async (props: any) => {
                 </div>
             </div>
             <div>
-                <h1 className="fs-[20px] text-2xl fw-bolder my-10 " >More like this</h1>
+                <h1 className="fs-[20px] text-2xl font-semibold my-10 " >More like this</h1>
                 <div className="flex overflow-x-scroll">
                     {moreLike.map((e: any) => {
                         return <MoreLikeThisCard e={e} />

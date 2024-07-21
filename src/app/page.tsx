@@ -5,12 +5,13 @@ import { getDocs, collection, getFirestore, limit, query } from "firebase/firest
 import app from "@/firebase";
 import CategoryListing from "@/components/categoryLisitng";
 import RightSection from "@/components/RightSection";
-
+import getPaginationData from '@/utils/hooks'
 
 const getData = async () => {
   app()
   const db = getFirestore()
-  const querySnapshot = await getDocs(collection(db, "posts"));
+  const postsQuery = query(collection(db, "posts"), limit(8));
+  const querySnapshot = await getDocs(postsQuery);
 
   const categoriesQuery = query(collection(db, 'categories'), limit(3))
   const categoriesSnapshot = await getDocs(categoriesQuery);
@@ -23,12 +24,18 @@ const getData = async () => {
     _category.push({ ...doc.data(), docID: doc.id })
   });
 
-  return { posts: _posts, cate: _category }
+  return { posts: _posts, cate: _category ,  }
 }
 
 export default async () => {
 
-  let { posts, cate }: any = await getData()
+  let { posts, cate }: any = await getData();
+
+  // setTimeout(() => {
+  //   getPaginationData(6).then((res) => {
+  //     console.log(JSON.stringify(res))
+  //   })
+  // }, 2000)
 
   return (
     <div className="pt-10 px-4" >

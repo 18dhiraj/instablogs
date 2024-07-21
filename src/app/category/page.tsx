@@ -34,8 +34,8 @@ const Category = async () => {
             formatedCate.push({ [firstWord]: [e] })
             lastAlphabet = firstWord
         } else if (lastAlphabet == firstWord) {
-            formatedCate.map((e1) => {
-                Object.entries(e1).map(([k, v]) => {
+            formatedCate.map((e1: any) => {
+                Object.entries(e1).map(([k, v]: any) => {
                     if (k == firstWord) {
                         v.push(e)
                     }
@@ -54,18 +54,18 @@ const Category = async () => {
             {/* <div className="grid gap-4 grid-cols-4" > */}
             <div className="" >
                 {
-                    formatedCate.map((e, i) => {
+                    formatedCate.map((e:any, i: number) => {
                         return (
                             <>
                                 <div>
                                     {
-                                        Object.entries(e).map(([e1, v1], i1) => {
+                                        Object.entries(e).map(([e1, v1] : any, i1: number) => {
                                             return (
                                                 <>
                                                     <div className="my-5 text-xl text-blue underline">{e1}</div>
                                                     <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 " >
                                                         {
-                                                            v1.map((val, ival) => {
+                                                            v1.map((val : any, ival: number) => {
                                                                 return <Allcategories e={val} i={ival} />
                                                             })
                                                         }

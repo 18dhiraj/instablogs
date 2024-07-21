@@ -18,7 +18,7 @@ export default async function (repo: any) {
     let posts = await getdata(repo.params.category)
     return (
         <>
-            <div className="pt-10 grid grid-cols-1 lg:grid-cols-2 gap-[80px]" >
+            <div className="pt-10 grid grid-cols-1 lg:grid-cols-2 gap-[80px] m-5" >
                 {
                     posts.props.map((e: any, i: number) => <HomePageCard e={e} i={i} w={'80%'} />)
                 }

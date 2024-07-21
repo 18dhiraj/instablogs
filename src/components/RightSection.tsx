@@ -34,9 +34,9 @@ const RightSection = async () => {
     return (
         <div className="overflow-hidden bg-[#fae8cf] p-1 md:p-4 rounded-lg">
             <div className="mb-5">
-                <div className=" text-sm md:text-xl mb-2 p-1 md:p-0 whitespace-break-spaces" >Popular</div>
+                <div className=" text-sm md:text-xl font-semibold mb-2 p-1 md:p-0 whitespace-break-spaces" >Popular</div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2" >
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-1" >
                     {
                         latest.map((e: any, i: number) => (
                             <SideListPostItem e={e} i={i} />
@@ -46,8 +46,8 @@ const RightSection = async () => {
                 </div >
             </div >
             <div className="mb-5">
-                <div className="text-sm md:text-xl mb-2 whitespace-break-spaces" >Top Categories</div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2" >
+                <div className="text-sm md:text-xl mb-2 font-semibold whitespace-break-spaces" >Top Categories</div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-1" >
                     {
                         category.map((e: any, i: number) => (
                             <SideListCategoryItem e={e} i={i} />
