@@ -6,6 +6,7 @@ import Image from "next/image";
 import { collection, getDocs, getFirestore, orderBy, query } from "firebase/firestore";
 import app from "@/firebase";
 import Allcategories from "@/components/allcategories";
+import Footer from "@/components/Footer";
 
 const getCate = async () => {
     app()
@@ -102,6 +103,7 @@ const Category = async () => {
                     })
                 }
             </div>
+            <Footer/>
         </div >
 
     )
