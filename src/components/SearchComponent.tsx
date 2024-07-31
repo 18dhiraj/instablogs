@@ -34,7 +34,7 @@ const SearchComponent = (props: any) => {
 
     return (
         <div onClick={(e) => e.stopPropagation()} className=" shadow p-3 px-5 bg-[#fff] rounded shadow w-[300px]">
-            <input className="border p-1 rounded w-[100%]" placeholder="Search blogs" onChange={(e) => debounce(e.target.value)} value={searchText} />
+            <input className="border p-1 rounded w-[100%]" placeholder="Search" onChange={(e) => debounce(e.target.value)} value={searchText} />
             <div className="mt-3">
                 {searchResults.map((e: any) => {
                     return (
